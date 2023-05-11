@@ -1,11 +1,13 @@
-import { Container, Header, Title, Content } from './styles'
+import { Container, Title, Content } from "./styles";
 
-export function Home(){
-  return(
+import { Header } from "../../components/Header";
+
+export function Home() {
+  return (
     <Container>
-      <Header></Header>
+      <Header />
       <Title></Title>
       <Content></Content>
     </Container>
-  )
+  );
 }

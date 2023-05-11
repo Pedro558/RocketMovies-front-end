@@ -15,13 +15,6 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 `
 
-export const Header = styled.div`
-  grid-area: header;
-  background-color: red;
-  width: 100%;
-  height: 116px;
-`
-
 export const Title = styled.div`
   grid-area: title;
   background-color: blue;
