@@ -1,4 +1,4 @@
-import { Container, Title, Search, Profile, Logout } from './styles';
+import { Container, Title, Search, Profile, Photo } from './styles';
 import { Input } from '../Input'
 import { FiSearch} from 'react-icons/fi'
 
@@ -12,15 +12,17 @@ export function Header(){
       </Search>
 
       <Profile>
-        <img 
-          src='https://github.com/Pedro558.png'
-          alt='Foto de perfil do usuário'
-        />
-
         <div>
           <strong>Nome do Usuário</strong>
-          <Logout/>
+          <button>Sair</button>
         </div>
+
+        <Photo href='#'>
+          <img 
+            src='https://github.com/Pedro558.png'
+            alt='Foto de perfil do usuário'
+          />
+        </Photo>
       </Profile>
 
 

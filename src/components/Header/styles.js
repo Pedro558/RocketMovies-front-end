@@ -12,8 +12,10 @@ export const Container = styled.header`
 
   display: flex;
   justify-content: space-between;
+  gap: 64px;
+  align-items: center;
 
-  padding: 0 80px;
+  padding: 30px 80px;
 `;
 
 export const Title = styled.h1`
@@ -22,8 +24,35 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.COLORS.PINK};
 `;
 
-export const Search = styled.div``;
+export const Search = styled.div`
+  flex-grow: 1;
+`;
 
-export const Profile = styled.a``;
+export const Photo = styled.a`
+  >img{
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+   }
+`
 
-export const Logout = styled.button``;
+export const Profile = styled.section`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+
+  > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    > button{
+      border: none;
+      background: none;
+      color: ${({ theme }) => theme.COLORS.GRAY_300};
+    }
+  }
+
+ 
+`;
