@@ -6,8 +6,11 @@ export function Home() {
   return (
     <Container>
       <Header />
+      {/*
       <Title></Title>
       <Content></Content>
+      */
+      }
     </Container>
   );
 }
