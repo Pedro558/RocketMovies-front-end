@@ -47,7 +47,5 @@ export const Content = styled.div`
   grid-area: content;
   padding: 0 64px; 
   overflow-y: auto;
-  width: 600px;
-  background-color: orange;
   margin: 40px auto;
 `
