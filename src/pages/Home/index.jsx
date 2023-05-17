@@ -1,15 +1,15 @@
-import { Container, Title, NewMovie, Content } from "./styles";
+import { Container, NewMovie, Content } from "./styles";
 
 import { Header } from "../../components/Header";
 import { FiPlus } from 'react-icons/fi'
+import { Title } from '../../components/Title'
 
 export function Home() {
   return (
     <Container>
       <Header />
       
-      <Title>
-        <h1>Meus filmes</h1>
+      <Title title='Meus filmes'>
         <NewMovie>
           <FiPlus/>
           Adicionar filme
