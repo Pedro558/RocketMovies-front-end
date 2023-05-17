@@ -15,6 +15,10 @@ export function Home() {
           Adicionar filme
         </NewMovie>
       </Title>
+
+      <Content>
+        
+      </Content>
     </Container>
   );
 }

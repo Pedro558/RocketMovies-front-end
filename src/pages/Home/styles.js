@@ -45,8 +45,6 @@ export const NewMovie = styled.a`
 
 export const Content = styled.div`
   grid-area: content;
-  background-color: orange;
-  width: 70%;
-  height: 60vh;
-  margin: 0 auto;
+  padding: 0 64px; 
+  overflow-y: auto;
 `
