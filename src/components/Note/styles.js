@@ -11,4 +11,8 @@ export const Container = styled.button`
   >h1{
     color: ${({ theme })=> theme.COLORS.WHITE};
   }
+
+  & svg{
+    color: ${({ theme })=>theme.COLORS.PINK};
+  }
 `

@@ -20,6 +20,7 @@ export function Home() {
       <Content>
         <Note data={{
           title: 'The Whale',
+          rating: 4,
           tags: [
             {id: '1', name: 'drama'},
             {id: '2', name: 'oscar'},
