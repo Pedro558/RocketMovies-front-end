@@ -12,7 +12,7 @@ export const Container = styled.button`
     flex-direction: column;
     align-items: flex-start;
 
-  >h1{
+  >h2{
     color: ${({ theme })=> theme.COLORS.WHITE};
   }
 
@@ -20,8 +20,13 @@ export const Container = styled.button`
     color: ${({ theme })=>theme.COLORS.PINK};
   }
 
+  >span{
+    margin: 8px 0px 15px;
+  }
+
   >p{
     color: ${({ theme })=> theme.COLORS.GRAY_100};
     text-align: left;
+    margin-bottom: 15px;
   }
 `

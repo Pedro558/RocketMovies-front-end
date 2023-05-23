@@ -23,9 +23,9 @@ export function Home() {
           rating: 4,
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, maiores laudantium inventore ut nihil voluptatum impedit ipsa. Optio quis perferendis cupiditate provident reiciendis quae quas assumenda, libero hic laboriosam.",
           tags: [
-            {id: '1', name: 'drama'},
-            {id: '2', name: 'oscar'},
-            {id: '3', name: 'obesity'},
+            {id: '1', name: 'Drama'},
+            {id: '2', name: 'Oscar'},
+            {id: '3', name: 'Obesity'},
           ]
         }}/>
 
@@ -34,9 +34,9 @@ export function Home() {
           rating: 2,
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, maiores laudantium inventore ut nihil voluptatum impedit ipsa. Optio quis perferendis cupiditate provident reiciendis quae quas assumenda, libero hic laboriosam.",
           tags: [
-            {id: '1', name: 'drama'},
-            {id: '2', name: 'oscar'},
-            {id: '3', name: 'obesity'},
+            {id: '1', name: 'Drama'},
+            {id: '2', name: 'Oscar'},
+            {id: '3', name: 'Obesity'},
           ]
         }}/>
 
@@ -45,9 +45,9 @@ export function Home() {
           rating: 3,
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, maiores laudantium inventore ut nihil voluptatum impedit ipsa. Optio quis perferendis cupiditate provident reiciendis quae quas assumenda, libero hic laboriosam.",
           tags: [
-            {id: '1', name: 'drama'},
-            {id: '2', name: 'oscar'},
-            {id: '3', name: 'obesity'},
+            {id: '1', name: 'Drama'},
+            {id: '2', name: 'Oscar'},
+            {id: '3', name: 'Obesity'},
           ]
         }}/>
       </Content>

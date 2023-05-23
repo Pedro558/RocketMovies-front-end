@@ -5,7 +5,7 @@ import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 export function Note({ data, ...rest}){
   return(
     <Container>
-      <h1>{data.title}</h1>
+      <h2>{data.title}</h2>
 
       {
         data.rating &&
