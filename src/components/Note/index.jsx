@@ -29,8 +29,9 @@ export function Note({ data, ...rest}){
             })()
           }
        </span>
-        
       }
+
+      <p>{data.description}</p>
 
       {
         data.tags && 

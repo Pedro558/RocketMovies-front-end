@@ -21,6 +21,7 @@ export function Home() {
         <Note data={{
           title: 'The Whale',
           rating: 4,
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, maiores laudantium inventore ut nihil voluptatum impedit ipsa. Optio quis perferendis cupiditate provident reiciendis quae quas assumenda, libero hic laboriosam.",
           tags: [
             {id: '1', name: 'drama'},
             {id: '2', name: 'oscar'},
