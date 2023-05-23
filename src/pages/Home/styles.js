@@ -49,4 +49,8 @@ export const Content = styled.div`
   padding: 0 120px; 
   overflow-y: auto;
   margin: 40px auto;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 `

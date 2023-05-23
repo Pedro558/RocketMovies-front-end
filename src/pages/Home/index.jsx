@@ -28,6 +28,28 @@ export function Home() {
             {id: '3', name: 'obesity'},
           ]
         }}/>
+
+        <Note data={{
+          title: 'Fast and Furious',
+          rating: 2,
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, maiores laudantium inventore ut nihil voluptatum impedit ipsa. Optio quis perferendis cupiditate provident reiciendis quae quas assumenda, libero hic laboriosam.",
+          tags: [
+            {id: '1', name: 'drama'},
+            {id: '2', name: 'oscar'},
+            {id: '3', name: 'obesity'},
+          ]
+        }}/>
+
+        <Note data={{
+          title: 'Stranger Things',
+          rating: 3,
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, maiores laudantium inventore ut nihil voluptatum impedit ipsa. Optio quis perferendis cupiditate provident reiciendis quae quas assumenda, libero hic laboriosam.",
+          tags: [
+            {id: '1', name: 'drama'},
+            {id: '2', name: 'oscar'},
+            {id: '3', name: 'obesity'},
+          ]
+        }}/>
       </Content>
     </Container>
   );

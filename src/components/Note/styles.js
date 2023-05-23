@@ -15,4 +15,8 @@ export const Container = styled.button`
   & svg{
     color: ${({ theme })=>theme.COLORS.PINK};
   }
+
+  >p{
+    color: ${({ theme })=> theme.COLORS.GRAY_100};
+  }
 `
