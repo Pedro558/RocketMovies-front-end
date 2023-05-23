@@ -8,6 +8,10 @@ export const Container = styled.button`
   border-radius: 16px;
   padding: 32px;
 
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
   >h1{
     color: ${({ theme })=> theme.COLORS.WHITE};
   }
@@ -18,5 +22,6 @@ export const Container = styled.button`
 
   >p{
     color: ${({ theme })=> theme.COLORS.GRAY_100};
+    text-align: left;
   }
 `
