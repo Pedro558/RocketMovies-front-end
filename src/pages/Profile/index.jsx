@@ -1,12 +1,22 @@
 import { Link } from 'react-router-dom'
 import { Input } from '../../components/Input'
+import { Button } from '../../components/Button'
 
+import { Container, Form, Avatar } from './styles'
+
+import { FiArrowLeft, FiUser, FiMail, FiLock, FiCamera } from 'react-icons/fi'
 
 export function Profile(){
   return(
-    <div>
-      <h1>Hello Profile</h1>
-      <Link to='/'> Back to Home </Link>
-    </div>
+    <Container>
+    <header>
+      <Link to='/'>
+        <FiArrowLeft />
+        <span>Voltar</span>
+      </Link>
+    </header>
+
+    
+  </Container>
   )
 }
