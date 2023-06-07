@@ -1,4 +1,5 @@
 import { Textarea } from "../../components/Textarea";
+import { Section } from '../../components/Section';
 
 export function New(){
   return(
@@ -6,6 +7,10 @@ export function New(){
       <div>New Page</div>
 
       <Textarea placeholder='Observações'/>
+
+      <Section title='Marcadores'>
+        <div>Example</div>
+      </Section>
     </>
   )
 }
