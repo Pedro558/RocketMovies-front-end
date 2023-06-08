@@ -5,7 +5,6 @@ import { FiPlus } from 'react-icons/fi'
 import { Title } from '../../components/Title'
 import { Note } from '../../components/Note'
 
-import { Link } from "react-router-dom";
 
 export function Home() {
   return (
@@ -13,9 +12,9 @@ export function Home() {
       <Header />
       
       <Title title='Meus filmes'>
-        <NewMovie>
+        <NewMovie to='/new'>
           <FiPlus/>
-          <Link to='/new'>Adicionar Filme</Link>
+          Adicionar Filme
         </NewMovie>
       </Title>
 
