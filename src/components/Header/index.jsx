@@ -1,31 +1,78 @@
-import { Container, Title, Search, Profile, Photo } from './styles';
+import { Nav, Container, MenuIcon, Title, Search, NavElements, Profile, Photo } from './styles';
 import { Input } from '../Input'
+import { Hamburger } from '../Hamburger'
 import { FiSearch} from 'react-icons/fi'
 
+import { useState, useEffect } from 'react'
+
+import { Link } from 'react-router-dom';
+
 export function Header(){
+  const [showNavbar, setShowNavbar] = useState(false)
+  const [windowWidth, setWindowWidth] = useState()
+
+  function checkWindowSize(){
+    setWindowWidth(window.innerWidth)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize',checkWindowSize)
+
+    return () => {
+      window.removeEventListener('resize',checkWindowSize)
+    }
+  }, [])
+
+
+  function handleShowNavbar(){
+    setShowNavbar(!showNavbar)
+  }
+
   return(
-    <Container>
-      <Title>RocketMovies</Title>
-      
-      <Search>
-        <Input placeholder="Pesquisar pelo título" icon={FiSearch}/>
-      </Search>
+    <Nav>
+      <Container>
+        <Title>RocketMovies</Title>
 
-      <Profile to='/profile'>
-        <div>
-          <strong>Nome do Usuário</strong>
-          <button>Sair</button>
-        </div>
+        <MenuIcon 
+        onClick={handleShowNavbar}
+        className='menu-icon'
+        >
+          <Hamburger/>
+        </MenuIcon>
 
-        <Photo href='#'>
-          <img 
-            src='https://github.com/Pedro558.png'
-            alt='Foto de perfil do usuário'
-          />
-        </Photo>
-      </Profile>
+      <NavElements
+        className={`nav-elements  ${showNavbar && "active"}`}
+      >
+        <Search
+          className='search'
+        >
+          <Input placeholder="Pesquisar pelo título" icon={FiSearch}/>
+        </Search>
 
+        <Profile>
+          <div>
+            <Link 
+              to='/profile'
+              className='user-name'
+            >
+              {windowWidth < 768 ? 'Perfil' : 'Pedro Afonso'}
+              
+            </Link>
+            <button onClick={() => alert('Voce saiu da página')}>Sair</button>
+          </div>
 
-    </Container>
+          <Photo 
+            to='/profile'
+            className='profile-photo'  
+          >
+            <img 
+              src='https://github.com/Pedro558.png'
+              alt='Foto de perfil do usuário'
+            />
+          </Photo>
+         </Profile>
+      </NavElements>
+      </Container>
+    </Nav>
   )
 }
