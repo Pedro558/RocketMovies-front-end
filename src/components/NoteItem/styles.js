@@ -22,5 +22,6 @@ export const Container = styled.div`
     > button {
       border: none;
       background: none;
+      color: ${({ theme }) => theme.COLORS.PINK};
     }
 `;
