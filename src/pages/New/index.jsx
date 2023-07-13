@@ -23,13 +23,39 @@ export function New(){
             </Link>
           </Title>
 
-          <div className='group-input'>
+          <div className='splitter'>
             <Input placeholder='Título'/>
             <Input placeholder='Sua nota (de 0 a 5)'/>
           </div>
 
           <Textarea placeholder='Observações'/>
+
+          <Section title='Marcadores'>
+            <div className='tags'>
+              <NoteItem
+                isNew
+                placeholder='Novo marcador'
+                value=''
+              />
+              <NoteItem
+                placeholder='Novo marcador'
+                value='React'
+              />
+              <NoteItem
+                placeholder='Novo marcador'
+                value='React'
+              />
+            </div>
+          </Section>
+
+          <div className='splitter'>
+            <Button title='Excluir filme' className='delete-btn'/>
+            <Button title='Salvar alterações'/>
+          </div>
+
         </Form>
+
+
       </main>
 
 
