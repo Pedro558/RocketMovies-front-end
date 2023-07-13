@@ -18,9 +18,10 @@ export const Container = styled.div`
   .tags{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 24px;
     background-color: ${({ theme }) => theme.COLORS.BLACK};
     padding: 16px;
+    border-radius: 8px;
   }
 `
 export const Form = styled.form`
@@ -40,9 +41,14 @@ export const Form = styled.form`
     color:  ${({ theme }) => theme.COLORS.PINK};
   }
 
-  .group-input{
+  .splitter{
     display: flex;
     justify-content: space-between;
     gap: 40px;
+  }
+
+  .delete-btn{
+    background-color: ${({ theme }) => theme.COLORS.BLACK};
+    color:  ${({ theme }) => theme.COLORS.PINK}; 
   }
 `
