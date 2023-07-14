@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
 export const Container = styled.button`
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 8px;
+  
   width: 100%;
   background-color: ${({ theme }) => theme.COLORS.PINK};
   color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
