@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Container } from './styles'
 
-export function Button({title, ...rest}){
+export function Button({title, children, ...rest}){
   const [loading, setLoading] = useState(false)
 
   function handleClick(){
@@ -16,6 +16,7 @@ export function Button({title, ...rest}){
       {...rest}
     >
       {loading ? 'Carregando...' : title}
+      {children}
     </Container>
   )
 }
