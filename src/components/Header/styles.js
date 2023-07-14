@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
@@ -9,8 +9,6 @@ export const Nav = styled.nav`
 `;
 
 export const Container = styled.div`
-  //grid-area: header;
-
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr;
   grid-template-rows: auto;
@@ -26,6 +24,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100vw;
 
     .menu-icon{
       display: block;
