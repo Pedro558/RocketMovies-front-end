@@ -1,8 +1,8 @@
 import { Container } from './styles'
 
-export function Title({ title, children }){
+export function Title({ title, children, ...rest }){
   return(
-    <Container>
+    <Container {...rest}>
       <h2>{title}</h2>
       {children}
     </Container>
