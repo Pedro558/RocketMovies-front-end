@@ -1,24 +1,29 @@
-import { Container, NewMovie, Content } from "./styles";
+import { Container, Content } from "./styles";
+import { FiPlus } from 'react-icons/fi'
 
 import { Header } from "../../components/Header";
-import { FiPlus } from 'react-icons/fi'
 import { Title } from '../../components/Title'
 import { Note } from '../../components/Note'
+import { Button } from '../../components/Button'
+import { useNavigate } from "react-router-dom";
 
 
 export function Home() {
+  const navigate = useNavigate()
+
   return (
     <Container>
       <Header />
-      
-      <Title title='Meus filmes'>
-        <NewMovie to='/new'>
-          <FiPlus/>
-          Adicionar Filme
-        </NewMovie>
+      <div>
+      <Title title='Meus filmes' className='main-title'>
+        <div>
+          <Button title='Adicionar Filme' onClick={() => navigate('/new')}>
+            <FiPlus/>
+          </Button>
+        </div>
       </Title>
 
-      <Content>
+      <Content className='content-area'>
         <Note data={{
           title: 'The Whale',
           rating: 4,
@@ -52,6 +57,7 @@ export function Home() {
           ]
         }}/>
       </Content>
+      </div>
     </Container>
   );
 }
