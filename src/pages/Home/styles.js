@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
   width: 100%;
@@ -13,45 +12,42 @@ export const Container = styled.div`
   "title"
   "content";
 
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};  
+
+  @media(max-width: 768px){
+    .main-title{
+      flex-direction: column;
+      margin-inline: 0px;
+      
+    }
+
+    .content-area{
+      margin-top: 100px;
+      padding-inline: clamp(10px, 10px + 3vw, 35px);
+    }
+  }
+
 `
 
 export const Title = styled.div`
   grid-area: title;
   display: flex;
+  flex-direction: row;
   margin: 45px 120px 35px;
   height: 50px;
   align-items: center;
   justify-content: space-between;
-
-  >h1{
-    font-size: 32px;
-  }
-`
-
-export const NewMovie = styled(Link)`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 207px;
-  height: 48px;
-  border-radius: 8px;
-  font-size: 16px;
-  color: ${({theme}) => theme.COLORS.BACKGROUND_900};
-  background-color: ${({theme}) => theme.COLORS.PINK};
-  line-height: 21px;
-  gap: 8px;
-  padding: 14px 25px;
+  
 `
 
 export const Content = styled.div`
   grid-area: content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
   width: 100%;
   padding: 0 120px; 
   overflow-y: auto;
   margin: 40px auto;
-  display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
 `
