@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 export function Header(){
   const [showNavbar, setShowNavbar] = useState(false)
-  const [windowWidth, setWindowWidth] = useState()
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   function checkWindowSize(){
     setWindowWidth(window.innerWidth)
