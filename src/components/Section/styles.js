@@ -10,4 +10,8 @@ export const Container = styled.section`
     font-size: 20px;
     font-weight: 400;
   }
+
+  @media(max-width: 768px){
+    margin-bottom: 12px;
+  }
 `
