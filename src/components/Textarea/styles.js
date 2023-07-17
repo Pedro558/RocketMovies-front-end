@@ -17,4 +17,8 @@ export const Container = styled.textarea`
   &:placeholder{
     color: ${({theme}) => theme.COLORS.GRAY_300};
   }
+
+  @media(max-width: 768px){
+    margin: 20px 0 20px;
+  }
 `
