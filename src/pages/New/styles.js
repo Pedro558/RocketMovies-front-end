@@ -51,4 +51,11 @@ export const Form = styled.form`
     background-color: ${({ theme }) => theme.COLORS.BLACK};
     color:  ${({ theme }) => theme.COLORS.PINK}; 
   }
+
+  @media(max-width: 768px){
+    .splitter{
+      gap: 15px;
+      flex-direction: column;
+    }
+  }
 `
