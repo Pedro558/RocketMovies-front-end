@@ -10,19 +10,12 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     padding: 0 124px;
+  }
 
-    a{
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    svg{
-      font-size: 24px;
-    }
-
-    a, svg{
-      color: ${({ theme }) => theme.COLORS.PINK};
+  @media(max-width: 688px){
+    > header{
+      padding: 35px 20px;
+      align-items: flex-start;
     }
   }
 `
@@ -30,6 +23,7 @@ export const Container = styled.div`
 export const Form = styled.form`
   max-width: 340px;
   margin: 30px auto;
+  padding: 10px;
 
   > div:nth-child(4){
       margin-top: 24px;
