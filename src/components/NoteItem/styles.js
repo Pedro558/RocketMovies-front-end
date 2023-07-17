@@ -24,4 +24,8 @@ export const Container = styled.div`
       background: none;
       color: ${({ theme }) => theme.COLORS.PINK};
     }
+
+    @media(max-width: 768px){
+      width: 100%;
+    }
 `;
