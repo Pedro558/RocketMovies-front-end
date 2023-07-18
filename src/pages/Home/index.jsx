@@ -11,6 +11,10 @@ import { useNavigate } from "react-router-dom";
 export function Home() {
   const navigate = useNavigate()
 
+  function handleDetails(id){
+    navigate(`/details/${id}`)
+  }
+
   return (
     <Container>
       <Header />
@@ -25,6 +29,7 @@ export function Home() {
 
       <Content className='content-area'>
         <Note data={{
+          id: 1,
           title: 'The Whale',
           rating: 4,
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, maiores laudantium inventore ut nihil voluptatum impedit ipsa. Optio quis perferendis cupiditate provident reiciendis quae quas assumenda, libero hic laboriosam.",
@@ -33,9 +38,10 @@ export function Home() {
             {id: '2', name: 'Oscar'},
             {id: '3', name: 'Obesity'},
           ]
-        }}/>
+        }} onClick={() => handleDetails(1)}/>
 
         <Note data={{
+          id: 2,
           title: 'Fast and Furious',
           rating: 2,
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, maiores laudantium inventore ut nihil voluptatum impedit ipsa. Optio quis perferendis cupiditate provident reiciendis quae quas assumenda, libero hic laboriosam.",
@@ -47,6 +53,7 @@ export function Home() {
         }}/>
 
         <Note data={{
+          id: 3,
           title: 'Stranger Things',
           rating: 3,
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, maiores laudantium inventore ut nihil voluptatum impedit ipsa. Optio quis perferendis cupiditate provident reiciendis quae quas assumenda, libero hic laboriosam.",
