@@ -25,6 +25,7 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100vw;
+    padding-inline: 40px;
 
     .menu-icon{
       display: block;
@@ -64,7 +65,10 @@ export const Title = styled.h1`
   align-items: center;
   font-size: 24px;
   line-height: 32px;
-  color: ${({ theme }) => theme.COLORS.PINK};
+
+  >a{
+    color: ${({ theme }) => theme.COLORS.PINK};
+  }
 `;
 
 export const MenuIcon = styled.div`
