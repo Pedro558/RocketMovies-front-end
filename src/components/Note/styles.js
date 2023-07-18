@@ -16,14 +16,6 @@ export const Container = styled.button`
     color: ${({ theme })=> theme.COLORS.WHITE};
   }
 
-  & svg{
-    color: ${({ theme })=>theme.COLORS.PINK};
-  }
-
-  >span{
-    margin: 8px 0px 15px;
-  }
-
   >p{
     color: ${({ theme })=> theme.COLORS.GRAY_100};
     text-align: left;
