@@ -5,10 +5,8 @@ import { Textarea } from "../../components/Textarea";
 import { Section } from '../../components/Section';
 import { NoteItem } from "../../components/NoteItem";
 import { Button } from "../../components/Button";
-import { Link } from 'react-router-dom';
-import { FiArrowLeft } from 'react-icons/fi'
-
-import { Container, Form } from './styles'
+import { BackButton } from "../../components/BackButton"
+import { Container, Form, GroupTitle } from './styles'
 
 export function New(){
   return(
@@ -16,12 +14,12 @@ export function New(){
       <Header/>
 
       <main>
+        <GroupTitle>
+          <BackButton title='Voltar' />
+          <Title title='Novo Filme'/>
+        </GroupTitle>
+
         <Form>
-          <Title title='Novo Filme'>
-            <Link to='/'>
-              <button className='back-btn'><FiArrowLeft/>Voltar</button>
-            </Link>
-          </Title>
 
           <div className='splitter'>
             <Input placeholder='Título'/>
