@@ -12,13 +12,19 @@ export const Container = styled.div`
   "title"
   "content";
 
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};  
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+  .main-title{
+    grid-area: title;
+    margin: 45px 120px 35px;
+    justify-content: space-between;
+    gap: 0px;
+  }
 
   @media(max-width: 768px){
     .main-title{
       flex-direction: column;
       margin-inline: 0px;
-      
     }
 
     .content-area{
