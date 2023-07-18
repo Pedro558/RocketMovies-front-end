@@ -4,16 +4,10 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
 
-  display: grid;
-  grid-template-rows: 105px auto;
-  grid-template-areas:
-  "header"
-  "content";
-
-  >main {
-    grid-area: content;
-    overflow-y: auto;
-  }
+   >main {
+    margin: 40px 120px;
+    width: 75vw;
+  } 
 
   .tags{
     display: flex;
@@ -24,22 +18,16 @@ export const Container = styled.div`
     border-radius: 8px;
   }
 `
+
+export const GroupTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+`
+
 export const Form = styled.form`
-  width: 80%;
-  margin: 38px auto;
-
-   >div:nth-child(1){
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    margin: 40px 0;
-    height: 92px;
-  }
-
-  .back-btn{
-    background: none;
-    border: none;
-    color:  ${({ theme }) => theme.COLORS.PINK};
-  }
+  margin: 40px auto;
 
   .splitter{
     display: flex;
