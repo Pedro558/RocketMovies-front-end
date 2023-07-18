@@ -1,11 +1,20 @@
-import { Nav, Container, MenuIcon, Title, Search, NavElements, Profile, Photo } from './styles';
+import { useState, useEffect } from 'react'
 import { Input } from '../Input'
 import { Hamburger } from '../Hamburger'
 import { FiSearch} from 'react-icons/fi'
-
-import { useState, useEffect } from 'react'
-
 import { Link } from 'react-router-dom';
+
+import { 
+  Nav, 
+  Container,
+  MenuIcon,
+  Title, 
+  Search, 
+  NavElements, 
+  Profile, 
+  Photo 
+} from './styles';
+
 
 export function Header(){
   const [showNavbar, setShowNavbar] = useState(false)
@@ -31,7 +40,7 @@ export function Header(){
   return(
     <Nav>
       <Container>
-        <Title>RocketMovies</Title>
+        <Title><Link to='/'>RocketMovies</Link></Title>
 
         <MenuIcon 
         onClick={handleShowNavbar}
