@@ -1,35 +1,16 @@
 import { Container } from './styles'
 import { Tag } from '../../components/Tag'
-import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
+import { CountStars } from '../CountStars'
 
-export function Note({ data, ...rest}){
+export function Note({ data, onClick, ...rest}){
   return(
-    <Container>
+    <Container
+    onClick={onClick}
+    {...rest}
+    >
       <h2>{data.title}</h2>
 
-      {
-        data.rating &&
-        <span>
-          {
-            (() => {
-              const filledStars = data.rating;
-              const emptyStars = 5 - filledStars;
-
-              const stars = [];
-
-              for (let i = 0; i < filledStars; i++) {
-                stars.push(<span key={i}> <AiFillStar/> </span>);
-              }
-
-              for (let i = 0; i < emptyStars; i++) {
-                stars.push(<span key={filledStars + i}><AiOutlineStar/></span>);
-              }
-
-              return stars;
-            })()
-          }
-       </span>
-      }
+      <CountStars rating={data.rating} />
 
       <p>{data.description}</p>
 
