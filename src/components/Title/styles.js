@@ -2,12 +2,12 @@ import styled from 'styled-components'
 
 
 export const Container = styled.div`
-   grid-area: title;
   display: flex;
-  margin: 45px 120px 35px;
+  margin: 0%;
   height: 50px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px;
 
   >h2{
     font-size: 32px;
