@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 100vh;
 
    >main {
-    margin: 40px 120px;
+    margin: 40px auto;
     width: 75vw;
   } 
 
