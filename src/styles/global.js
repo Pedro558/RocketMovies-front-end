@@ -23,6 +23,10 @@ export default createGlobalStyle`
     text-decoration: none;
   }
 
+  input:focus, button:focus{
+      border: 1px solid #2565cc;
+    }
+
   button, a{
     cursor: pointer;
     transition: filter 0.2s;
