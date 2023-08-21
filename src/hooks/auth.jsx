@@ -1,5 +1,4 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-
 import { api } from '../services/api'
 
 export const AuthContext = createContext({});
@@ -48,12 +47,14 @@ function AuthProvider({ children }){
       }
 
       await api.put('/users', user)
+
+      localStorage.removeItem('@rocketnotes:user')
       localStorage.setItem('@rocketnotes:user', JSON.stringify(user))
 
       setData({ user, token: data.token })
       alert('Perfil atualizado')
 
-    } catch (error) {
+    }catch (error) {
       if(error.response){
         alert(error.response.data.message)
       } else{
