@@ -3,9 +3,13 @@ import styled from 'styled-components'
 export const Container = styled.div`
       display: flex;
       align-items: center;
-      gap: 8px;
+      justify-content: space-between;
+      width: 100%;
 
     >button{
+      display: flex;
+      align-items: center;
+      gap: 8px;
       background: none;
       border: none;
     }

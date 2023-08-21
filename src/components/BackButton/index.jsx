@@ -3,7 +3,7 @@ import { FiArrowLeft } from 'react-icons/fi'
 
 import { Container } from './styles'
 
-export function BackButton({title}){
+export function BackButton({title, children}){
   const navigate = useNavigate()
 
   return(
@@ -12,6 +12,8 @@ export function BackButton({title}){
         <FiArrowLeft />
         <span>{title}</span>
       </button>
+
+      {children}
     </Container>
   )
 }
