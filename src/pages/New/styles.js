@@ -35,11 +35,6 @@ export const Form = styled.form`
     gap: 40px;
   }
 
-  .delete-btn{
-    background-color: ${({ theme }) => theme.COLORS.BLACK};
-    color:  ${({ theme }) => theme.COLORS.PINK}; 
-  }
-
   @media(max-width: 768px){
     .splitter{
       gap: 15px;
