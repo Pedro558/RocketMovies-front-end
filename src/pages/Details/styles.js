@@ -37,6 +37,15 @@ export const DetailsBox = styled.section`
   .rating{
     margin: 0;
   }
+
+  .remove-btn{
+    cursor: pointer;
+    transition: filter 0.2s ease 0s;
+  }
+
+  .remove-btn:hover{
+    filter: brightness(0.9);
+  }
 `
 
 export const Info = styled.div`
