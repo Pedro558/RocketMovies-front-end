@@ -109,6 +109,10 @@ export const Profile = styled.div`
       color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
 
+    >button:focus{
+      border: 1px solid #2565cc;
+    }
+
     >.user-name{
       color: ${({ theme }) => theme.COLORS.WHITE};
     }
