@@ -2,7 +2,11 @@ import { useState, useEffect } from 'react'
 import { Input } from '../Input'
 import { Hamburger } from '../Hamburger'
 import { FiSearch} from 'react-icons/fi'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
+import { api } from '../../services/api'
+import { useAuth } from '../../hooks/auth'
 
 import { 
   Nav, 
@@ -16,9 +20,14 @@ import {
 } from './styles';
 
 
-export function Header(){
+export function Header({setter}){
+  const { signOut, user } = useAuth()
+  const navigate = useNavigate()
+
   const [showNavbar, setShowNavbar] = useState(false)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
 
   function checkWindowSize(){
     setWindowWidth(window.innerWidth)
@@ -38,6 +47,7 @@ export function Header(){
   }
 
   return(
+    
     <Nav>
       <Container>
         <Title><Link to='/'>RocketMovies</Link></Title>
@@ -55,7 +65,11 @@ export function Header(){
         <Search
           className='search'
         >
-          <Input placeholder="Pesquisar pelo título" icon={FiSearch}/>
+          <Input
+            placeholder="Pesquisar pelo título" 
+            icon={FiSearch}
+            onChange={(e) => setter(e.target.value)}
+          />
         </Search>
 
         <Profile>
@@ -64,10 +78,15 @@ export function Header(){
               to='/profile'
               className='user-name'
             >
-              {windowWidth < 768 ? 'Perfil' : 'Pedro Afonso'}
+              {windowWidth < 768 ? 'Perfil' : `${user.name}`}
               
             </Link>
-            <button onClick={() => alert('Voce saiu da página')}>Sair</button>
+            <button onClick={() => {
+              signOut()
+              navigate('/')
+              }}>
+                Sair
+              </button>
           </div>
 
           <Photo 
@@ -75,8 +94,8 @@ export function Header(){
             className='profile-photo'  
           >
             <img 
-              src='https://github.com/Pedro558.png'
-              alt='Foto de perfil do usuário'
+              src={avatarUrl}
+              alt={user.name}
             />
           </Photo>
          </Profile>

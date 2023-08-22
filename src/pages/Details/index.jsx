@@ -1,11 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate, useParams } from "react-router-dom";
+import { api } from '../../services/api';
+import { useAuth } from '../../hooks/auth'
+
 import { Header } from "../../components/Header";
 import { Title } from "../../components/Title";
 import { BackButton } from "../../components/BackButton";
 import { CountStars } from "../../components/CountStars";
 import { Tag } from '../../components/Tag';
 
-import { BiTime } from "react-icons/bi";
+import { BiTime, BiTrash } from "react-icons/bi";
 
 import { 
   Container,
@@ -17,35 +21,52 @@ import {
   MovieDescription
 } from "./styles";
 
-let initialData = {
-  id: 1,
-  title: 'The Whale',
-  rating: 4,
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, maiores laudantium inventore ut nihil voluptatum impedit ipsa. Optio quis perferendis cupiditate provident reiciendis quae quas assumenda, libero hic laboriosam.",
-  tags: [
-    {id: '1', name: 'Drama'},
-    {id: '2', name: 'Oscar'},
-    {id: '3', name: 'Obesity'},
-  ],
-  created_at: '2023-03-19 21:30:04'
-}
-
 export function Details() {
-  const [data, setData] = useState(initialData)
+  const params = useParams()
+  const navigate = useNavigate()
+  const { user } = useAuth()
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
+
+  const [data, setData] = useState(null)
+
+  async function handleRemove(){
+    const confirm = window.confirm('Deseja realmente remover a nota ?')
+
+    if(confirm){
+      await api.delete(`/notes/${params.id}`)
+      navigate('/')
+    }
+  }
+
+  useEffect(() => {
+    async function fetchNote(){
+      const response = await api.get(`/notes/${params.id}`)
+      setData(response.data)
+    }
+    
+    fetchNote()
+  }, [])
   
   return (
     <Container>
       <Header/>
-
+      {console.log(data)}
+      {data && 
+      <>
       <DetailsBox className='details-box'>
-        <BackButton title='Voltar'/>
+        <BackButton title='Voltar'>
+          <BiTrash 
+            onClick={handleRemove}
+            className='remove-btn'
+          />
+        </BackButton>
 
         <Title 
-          title={data.title}
+          title={data.note.title}
           className='title'
         >
           <CountStars 
-            rating={data.rating}
+            rating={data.note.rating}
             className='rating'
           />
         </Title>
@@ -53,15 +74,15 @@ export function Details() {
         <Info className='profile-info'>
           <Profile>
             <img
-             src='https://github.com/Pedro558.png'
+             src={avatarUrl}
              alt='Foto de perfil do usuário'
             />
-            <span>Por Pedro Afonso</span>
+            <span>Por {user.name}</span>
           </Profile>
 
           <Datetime>
             <BiTime/>
-            <span>{data.created_at}</span>
+            <span>{data.note.created_at}</span>
           </Datetime>
         </Info>
 
@@ -71,8 +92,10 @@ export function Details() {
       </DetailsBox>
 
       <MovieDescription className='movie-description'>
-        {data.description}
+        {data.note.description}
       </MovieDescription>
+      </>
+      }
     </Container>
   )
 }
