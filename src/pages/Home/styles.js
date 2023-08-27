@@ -56,4 +56,5 @@ export const Content = styled.div`
   padding: 0 120px; 
   overflow-y: auto;
   margin: 40px auto;
+  padding-bottom: 40px;
 `
