@@ -7,6 +7,7 @@ export const Container = styled.div`
    >main {
     margin: 40px auto;
     width: 75vw;
+    padding-bottom: 40px;
   } 
 
   .tags{
