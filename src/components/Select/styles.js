@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import seta from '../../assets/seta.svg'
 
 export const Container = styled.div`
   width: 100%;
@@ -16,7 +17,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.GRAY_300};
 
     appearance: none;
-    background-image: url("/src/assets/seta.svg");
+    background-image: url(${seta});
     background-repeat: no-repeat;
     background-position: right 2rem top 50%;
     background-size: 1.6rem auto;
