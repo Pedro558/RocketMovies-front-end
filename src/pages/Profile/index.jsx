@@ -89,7 +89,7 @@ export function Profile(){
         />
 
         <Input
-          placeholder='Nova Senha'
+          placeholder='Nova Senha (mínimo 6 dígitos)'
           type='password'
           icon={FiLock}
           onChange={e => setPasswordNew(e.target.value)}
