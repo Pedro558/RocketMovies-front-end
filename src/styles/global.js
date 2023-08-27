@@ -13,7 +13,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  body, input, button, textarea{
+  body, input, button, textarea, select, option{
     font-family: 'Roboto Slab', serif;
     font-size: 16px;
     outline: none;
@@ -23,7 +23,7 @@ export default createGlobalStyle`
     text-decoration: none;
   }
 
-  input:focus, button:focus{
+  input:focus, button:focus, select:focus{
       border: 1px solid #2565cc;
     }
 
