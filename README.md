@@ -50,12 +50,12 @@ To test the application you can use this credentials:
 ### 🖥️ Web version
 
 <div style="display:flex; flex-direction: row">
-  <img alt="Food Explorer" title="Food Explorer" src="./.github/user.gif"/>
+  <img alt="Food Explorer" title="Food Explorer" src="./.github/desktop-version.gif"/>
 </div>
 
 ### 📲 Mobile Food Explorer 
 <div style="display:flex; flex-direction: row">
-  <img alt="Food Explorer" title="Food Explorer" src="./.github/user-mobile.gif"/>
+  <img alt="Food Explorer" title="Food Explorer" src="./.github/mobile-version.gif"/>
 </div>
 
 ## 🚀 Getting started
