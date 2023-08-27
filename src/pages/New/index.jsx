@@ -8,6 +8,7 @@ import { Section } from '../../components/Section';
 import { NoteItem } from "../../components/NoteItem";
 import { Button } from "../../components/Button";
 import { BackButton } from "../../components/BackButton"
+import { Select } from '../../components/Select'
 import { Container, Form, GroupTitle } from './styles'
 
 import { useNavigate } from 'react-router-dom'
@@ -39,8 +40,8 @@ export function New(){
         throw new Error('Digite o título do filme')
       }
 
-      if(rating > 5) {
-        throw new Error('A nota do filme deve ser de até 5 no máximo')
+      if(rating <= 0 || rating > 5) {
+        throw new Error('Selecione uma nota para o filme')
       }
 
       if(newTag === '' && tags.length == 0){
@@ -81,15 +82,20 @@ export function New(){
               value={title}
               onChange={e => setTitle(e.target.value)}
             />
-            <Input 
-              placeholder='Sua nota (de 0 a 5)'
-              type='number'   
-              value={rating}         
+            <Select 
+              label="rating"
+              type="number"
+              value={rating}
               onChange={e => setRating(e.target.value)}
-            />
+            >
+              <option disabled selected>Selecione uma nota</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </Select>
           </div>
-
-
 
           <Textarea 
             placeholder='Observações'
