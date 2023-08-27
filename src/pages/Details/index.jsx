@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from "react-router-dom";
 import { api } from '../../services/api';
 import { useAuth } from '../../hooks/auth'
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 
 import { Header } from "../../components/Header";
 import { Title } from "../../components/Title";
@@ -50,7 +51,6 @@ export function Details() {
   return (
     <Container>
       <Header/>
-      {console.log(data)}
       {data && 
       <>
       <DetailsBox className='details-box'>
